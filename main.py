@@ -1,15 +1,17 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from controller.main_controller import MainController
+from controller.tela_principal_controller import TelaPrincipalController
 
 
 def main():
+    # Inicia o motor do Qt
     app = QApplication(sys.argv)
     
-    # Instancia e exibe a janela principal
-    window = MainController()
-    window.show()
+    # Cria e exibe a janela principal
+    janela_principal = TelaPrincipalController()
+    janela_principal.show()
     
+    # Mantém o programa rodando até o usuário fechar
     sys.exit(app.exec())
 
 
