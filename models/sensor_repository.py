@@ -64,4 +64,11 @@ class SensorRepository:
     @staticmethod
     def deletar(sensor_id: int) -> bool:
         """Deletar registro pelo ID (DELETE FROM ... WHERE id = ?)."""
-        pass
+        query = "DELETE FROM sensores WHERE id = ?"
+                
+        with Database.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(query, (sensor_id,))
+            conn.commit()
+
+        return cursor.rowcount > 0
