@@ -1,0 +1,6 @@
+{
+    "versao_app": "1.0.0",
+    "taxa_atualizacao_ms": 250,
+    "limite_alerta": 85.5,
+    "modo_operacao": "AUTOMATICO"
+}
